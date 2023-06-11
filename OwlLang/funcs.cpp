@@ -27,7 +27,7 @@ string crypt(string in)
     string output;
     for (size_t i = 0; i < in.size(); ++i)
     {
-        bitset<8> bits (static_cast<unsigned int> (static_cast<unsigned char> (in[i])));
+        bitset<8> bits (static_cast<unsigned char> (in[i]));
         string proc = bits.to_string<char,std::string::traits_type,std::string::allocator_type>();
         replaceAll(proc, "0", "У");
         replaceAll(proc, "1", "Г");
